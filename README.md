@@ -19,7 +19,6 @@ A full-stack Kanban board application inspired by Trello. Built with the **MERN*
 | Backend     | Node.js, Express |
 | Database    | MongoDB, Mongoose |
 | Auth        | JWT (Role-based access) |
-| Realtime    | Socket.io (Bonus) |
 
 ---
 
