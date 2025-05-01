@@ -6,7 +6,7 @@ A full-stack Kanban board application inspired by Trello. Built with the **MERN*
 
 ## 🚀 Live Demo
 
-- **Frontend**: [https://trello-gemley.vercel.app/login](https://trello-gemley.vercel.app/login)
+- **Frontend**: [https://trello-gemley.vercel.app/](https://trello-gemley.vercel.app/)
 - **Backend**: [https://trello-gemley-backend.onrender.com](https://trello-gemley-backend.onrender.com)
 
 ---

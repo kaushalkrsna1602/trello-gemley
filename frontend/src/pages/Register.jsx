@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from '../api/axios';
 import { useNavigate } from 'react-router-dom';
-// Assuming you have Heroicons installed: npm install @heroicons/react
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/20/solid';
 
 export default function Register() {
