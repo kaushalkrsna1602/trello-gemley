@@ -34,3 +34,15 @@ exports.getBoardById = async (req, res) => {
   }
 };
 
+exports.deleteBoard = async (req, res) => {
+  try {
+    const boardId = req.params.id;
+    // Handle the deletion logic, e.g., deleting from a database
+    await Board.findByIdAndDelete(boardId);
+    res.status(200).json({ message: 'Board deleted successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error deleting board' });
+  }
+}
+

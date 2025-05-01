@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -9,9 +9,16 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-800 text-white p-4 flex justify-between">
-      <h1 className="font-bold text-lg">Trello Clone</h1>
-      <button onClick={handleLogout} className="bg-red-500 px-3 py-1 rounded">Logout</button>
+    <nav className="bg-gray-800 text-white py-4 px-6 flex items-center justify-between shadow-md">
+      <Link  to="/dashboard" className="font-bold text-xl tracking-tight">TaskFlow</Link>
+      <div className="flex items-center space-x-4">
+        <button
+          onClick={handleLogout}
+          className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400 transition duration-150 ease-in-out"
+        >
+          Logout
+        </button>
+      </div>
     </nav>
   );
 }

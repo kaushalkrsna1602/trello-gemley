@@ -6,7 +6,7 @@ A full-stack Kanban board application inspired by Trello. Built with the **MERN*
 
 ## 🚀 Live Demo
 
-- **Frontend**: [https://kaushal-notes-app.vercel.app](https://kaushal-notes-app.vercel.app)
+- **Frontend**: [https://trello-gemley.vercel.app/login](https://trello-gemley.vercel.app/login)
 - **Backend**: [https://trello-gemley-backend.onrender.com](https://trello-gemley-backend.onrender.com)
 
 ---
@@ -84,9 +84,7 @@ A full-stack Kanban board application inspired by Trello. Built with the **MERN*
 
 ## 🧪 Bonus Features
 
-- 🔄 **Real-time Syncing**: Live updates with Socket.io
 - 🔒 **JWT Authentication** with role-based permissions
-- 🛎️ **Activity Logs / Notifications**
 
 ---
 
@@ -95,17 +93,17 @@ A full-stack Kanban board application inspired by Trello. Built with the **MERN*
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/kanban-app.git
+git clone https://github.com/kaushalkrsna1602/trello-gemley 
 cd kanban-app
 ```
 
 ### 2. Backend Setup
 
 ```bash
-cd server
+cd backend
 npm install
 # Create a .env file with your MongoDB URI and JWT secret
-npm start
+npm run dev
 ```
 
 > Server will run on `http://localhost:5000`
@@ -113,7 +111,7 @@ npm start
 ### 3. Frontend Setup
 
 ```bash
-cd client
+cd frontend
 npm install
 npm run dev
 ```
@@ -124,8 +122,8 @@ npm run dev
 
 ## 📦 Deployment
 
-- **Frontend**: Deploy to Vercel or Netlify
-- **Backend**: Use Render, Railway, or Vercel Functions
+- **Frontend**: Deployed to Vercel
+- **Backend**: Deployed to Render
 - **Database**: MongoDB Atlas
 
 ---

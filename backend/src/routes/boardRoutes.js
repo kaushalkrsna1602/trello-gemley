@@ -5,10 +5,12 @@ const {
   createBoard,
   getUserBoards,
   getBoardById,
+  deleteBoard,
 } = require('../controllers/boardController');
 
 router.post('/', auth(), createBoard);
 router.get('/', auth(), getUserBoards);
 router.get('/:id', auth(), getBoardById);
+router.delete('/:id', auth(), deleteBoard);
 
 module.exports = router;

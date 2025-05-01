@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import axios from '../api/axios';
 import { useNavigate } from 'react-router-dom';
+// Assuming you have Heroicons installed: npm install @heroicons/react
+import { EyeIcon, EyeSlashIcon } from '@heroicons/react/20/solid';
 
 export default function Register() {
   const [form, setForm] = useState({ name: '', email: '', password: '', role: 'editor' });
@@ -20,61 +22,67 @@ export default function Register() {
         onSubmit={handleSubmit}
         className="bg-white p-8 rounded-xl shadow-md w-full max-w-md space-y-4"
       >
-        <h2 className="text-2xl font-bold text-center mb-4">Register</h2>
+        <h2 className="text-2xl font-bold text-center mb-6">Register</h2>
 
-        <input
-          placeholder="Name"
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-          required
-        />
-        <input
-          placeholder="Email"
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          type="email"
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-          required
-        />
+        <div>
+          <input
+            placeholder="Name"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            onChange={(e) => setForm({ ...form, name: e.target.value })}
+            required
+          />
+        </div>
+        <div>
+          <input
+            placeholder="Email"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="email"
+            onChange={(e) => setForm({ ...form, email: e.target.value })}
+            required
+          />
+        </div>
 
         <div className="relative">
           <input
             type={showPassword ? 'text' : 'password'}
             placeholder="Password"
-            className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             onChange={(e) => setForm({ ...form, password: e.target.value })}
             required
           />
           <button
             type="button"
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-2 top-2 text-sm text-blue-500 hover:underline"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
           >
-            {showPassword ? 'Hide' : 'Show'}
+            {showPassword ? <EyeSlashIcon className="h-5 w-5" /> : <EyeIcon className="h-5 w-5" />}
           </button>
         </div>
 
-        <select
-          onChange={(e) => setForm({ ...form, role: e.target.value })}
-          className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          <option value="admin">Admin</option>
-          <option value="editor" selected>Editor</option>
-          <option value="viewer">Viewer</option>
-        </select>
+        <div>
+          <select
+            onChange={(e) => setForm({ ...form, role: e.target.value })}
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="admin">Admin</option>
+            <option value="editor" defaultValue>Editor</option>
+            <option value="viewer">Viewer</option>
+          </select>
+        </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition"
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition duration-150 ease-in-out"
         >
           Register
         </button>
 
-        <div className="text-center mt-2">
+        <div className="text-center mt-3">
           <span className="text-gray-600">Already a user? </span>
           <button
             type="button"
             onClick={() => navigate('/login')}
-            className="text-blue-600 hover:underline"
+            className="text-blue-600 hover:underline font-semibold"
           >
             Log In
           </button>
