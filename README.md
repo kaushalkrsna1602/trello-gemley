@@ -6,8 +6,8 @@ A full-stack Kanban board application inspired by Trello. Built with the **MERN*
 
 ## 🚀 Live Demo
 
-- **Live App**: _Coming Soon_
-- **GitHub Repo**: _Coming Soon_
+- **Frontend**: [https://kaushal-notes-app.vercel.app](https://kaushal-notes-app.vercel.app)
+- **Backend**: [https://trello-gemley-backend.onrender.com](https://trello-gemley-backend.onrender.com)
 
 ---
 
